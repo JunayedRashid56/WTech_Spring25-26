@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
-    <link rel="stylesheet" href="/WTech_Spring25-26/Lab3/Design/style.css">
+    <link rel="stylesheet" href="/WTech_Spring25-26/Mid/Lab3/Design/style.css">
 </head>
 <body>
     <div class="header">
@@ -17,12 +17,14 @@
 
     <h1>Patient Registration (Admission)</h1>
 
-    <form>
+    <form onsubmit="return collect_data()">
         <label for="Name">Patient Name : </label>
-        <input type="text" id="Name" name="patientName" placeholder="Enter the name"><br><br>
+        <input type="text" id="Name" name="patientName" placeholder="Enter the name">
+        <p id="NameError"></p><br><br>
 
         <label for="Age">Age : </label>
-        <input type="number" id="Age" name="patientAge"><br><br>
+        <input type="number" id="Age" name="patientAge">
+        <p id="AgeError"></p><br><br>
 
         <label for="DOB">Date of Birth : </label>
         <input type="date" id="DOB" name="patientDOB"><br><br>
@@ -50,6 +52,6 @@
         <label for="Submit">Submit Info : </label>
         <input type="submit" id="submit" name="DataSubmit" >
     </form>
-    
+    <script src="/WTech_Spring25-26/Mid/Lab3/Javascript/script.js"></script>
 </body>
 </html>
