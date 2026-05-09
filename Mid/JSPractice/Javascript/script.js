@@ -41,3 +41,34 @@ function updateDeliveryCharge() {
     
     deliveryChargeElement.textContent = deliveryCharge;
 }
+
+function toggleSubmitButton() {
+    if (termsCheckbox.checked) {
+        submitBtn.style.display = 'block';
+    } else {
+        submitBtn.style.display = 'none';
+    }
+}
+
+quantityInput.addEventListener('input', updateTotalPrice);
+quantityInput.addEventListener('change', updateTotalPrice);
+deliverySelect.addEventListener('change', updateDeliveryCharge);
+termsCheckbox.addEventListener('change', toggleSubmitButton);
+
+submitBtn.addEventListener('click', ()=>{
+    const address = document.getElementById('address').value;
+    
+    if (!address.trim()) {
+        alert('Please enter your shipping address!');
+        return;
+    }
+    
+    const totalPrice = parseInt(totalPriceElement.textContent);
+    const deliveryCharge = parseInt(deliveryChargeElement.textContent);
+    const grandTotal = totalPrice + deliveryCharge;
+    
+    alert(`Order submitted successfully!\nTotal Amount: ${totalPrice} Tk\nDelivery Charge: ${deliveryCharge} Tk\nGrand Total: ${grandTotal} Tk`);
+});
+
+updateTotalPrice();
+updateDeliveryCharge();
