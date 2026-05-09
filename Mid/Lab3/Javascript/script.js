@@ -8,7 +8,7 @@ function collect_data() {
 }
 
 function collect_name(){
-    let name = document.getElementById("PatientName").value;
+    let name = document.getElementById("patientName").value;
     if(name==""){
         document.getElementById("NameError").innerHTML="Name can't be Empty";
         return false;
@@ -25,7 +25,7 @@ function collect_name(){
 
 function collect_age()
 {
-    let age = document.getElementById("Age").value;
+    let age = document.getElementById("patientAge").value;
     if(age == "")
     {
         document.getElementById("AgeError").innerHTML="Age Can not be Empty";
