@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/WTech_Spring25-26/Mid/Lab3/Design/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1> ABC Hospital Limited </h1>
+    </div>
+
+    <div class = "topnav">
+        <a href="https://www.aiub.edu/"> AIUB WEBSITE </a>
+    </div>
+
+    <h1>Patient Registration (Admission)</h1>
+
+    <form>
+        <label for="Name">Patient Name : </label>
+        <input type="text" id="patientName" name="Name" placeholder="Enter the name" onchange="return collect_data()">
+        <p id="NameError"></p><br><br>
+
+        <label for="Age">Age : </label>
+        <input type="number" id="patientAge" name="Age">
+        <p id="AgeError"></p><br><br>
+
+        <label for="DOB">Date of Birth : </label>
+        <input type="date" id="DOB" name="patientDOB"><br><br>
+
+        <label for="GenderMale">Male : </label>
+        <input type="radio" id="GenderMale" name="Gender" value="Male"><br><br>
+
+        <label for="GenderFemale">Female : </label>
+        <input type="radio" id="GendeFemale" name="Gender" value="Female"><br><br>
+
+        <label for="Address">Address : </label>
+        <textarea id="patientAddress" name="Address" rows="4" cols="30" placeholder="Enter the address" onchange="return get_textarea()"></textarea><br><br>
+
+        <label for="InsertFiles">Patient Medical Report : </label>
+        <input type="file" id="InsertFiles" name="PatientFile"><br><br>
+
+        <label for="Doctor"> Prefered Doctors list : </label>
+        <select>
+            <option value="Default"></option>
+            <option value="Cardiac">Cardiac</option>
+            <option value="Skin">Skin</option>
+        </select>
+        <br><br>
+
+        <button id="keysubmit" onclick="return submit_key()">Data Submit</button>
+    </form>
+    <script src="/WTech_Spring25-26/Mid/Lab4/Javascript/script.js"></script>
+</body>
+</html>
