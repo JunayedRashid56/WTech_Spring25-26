@@ -50,6 +50,12 @@ input[type="text"],input[type="number"],input[type="date"],input[type="file"],se
     border-bottom: 18px;
 }
 
+input[type="submit"]:hover{
+    background-color: blue;
+    cursor: pointer;
+    font-display:auto;
+}
+
 #Name{
     align-content: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

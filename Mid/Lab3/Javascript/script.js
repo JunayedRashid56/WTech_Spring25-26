@@ -1,6 +1,6 @@
 console.log("Connected");
 
-function collet_data() {
+function collect_data() {
     let isNameValid = collect_name();
     let isAgeValid =collect_age();
 
