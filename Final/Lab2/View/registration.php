@@ -1,10 +1,10 @@
 <?php
-include "../Controller/RegistrationController.php";
+include "../Controller/registrationvalidation.php";
 ?>
 <!DOCTYPE html>
 <html>
     <body>
-        <form method = "post" action="../Controller/RegistrationController.php">
+        <form method = "post" action="../Controller/registrationvalidation.php">
             <table>
                 <tr>
                     <td> <label for ="Username">User Name: </label></td>
